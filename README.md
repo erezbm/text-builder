@@ -2,6 +2,7 @@
 A utility program to apply transformations on text.  
 
 ## Usage
+Add `tb` to `PATH`
 ```bash
 $ echo hello | tb -u
 HELLO
