@@ -14,9 +14,9 @@ char *build_text(char *input, int argc, char **argv) {
 	optind = 1;
 	while ((opt = getopt(argc, argv, "ulr")) != -1) {
 		switch (opt) {
-			case 'u': text = uppercase(text); break;
-			case 'l': text = lowercase(text); break;
-			case 'r': text = reverse(text); break;
+			case 'u': uppercase(&text); break;
+			case 'l': lowercase(&text); break;
+			case 'r': reverse(&text); break;
 			default: free(text); return NULL;
 		}
 	}

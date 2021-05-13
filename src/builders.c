@@ -2,31 +2,27 @@
 #include <string.h>
 #include <ctype.h>
 
-char *uppercase(char *input) {
-        size_t len = strlen(input);
-        char *output = malloc(sizeof(char[len + 1]));
-        for (int i = 0; i <= len; i++)
-                output[i] = toupper(input[i]);
-	free(input);
-        return output;
+void uppercase(char **input) {
+	char *input_val = *input;
+	size_t len = strlen(input_val);
+	for (int i = 0; i < len; i++)
+		input_val[i] = toupper(input_val[i]);
 }
 
-char *lowercase(char *input) {
-        size_t len = strlen(input);
-        char *output = malloc(sizeof(char[len + 1]));
-        for (int i = 0; i <= len; i++)
-                output[i] = tolower(input[i]);
-	free(input);
-        return output;
+void lowercase(char **input) {
+	char *input_val = *input;
+	size_t len = strlen(input_val);
+	for (int i = 0; i < len; i++)
+		input_val[i] = tolower(input_val[i]);
 }
 
-char *reverse(char *input) {
-	size_t len = strlen(input);
-        char *output = malloc(sizeof(char[len + 1]));
-        for (int i = 0, j = len - 1; i < len; i++, j--)
-                output[j] = input[i];
-	free(input);
-	output[len] = '\0';
-        return output;
+void reverse(char **input) {
+	char *input_val = *input;
+	size_t len = strlen(input_val);
+	for (int i = 0, j = len - 1; i < j; i++, j--) {
+		char temp = input_val[i];
+		input_val[i] = input_val[j];
+		input_val[j] = temp;
+	}
 }
 

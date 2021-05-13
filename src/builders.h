@@ -1,6 +1,6 @@
 #pragma once
 
-char *uppercase(char *input);
-char *lowercase(char *input);
-char *reverse(char *input);
+void uppercase(char **input);
+void lowercase(char **input);
+void reverse(char **input);
 
