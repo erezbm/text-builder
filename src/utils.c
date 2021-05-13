@@ -1,5 +1,4 @@
 #include <stdio.h>
-// #include <stdlib.h>
 
 char *read_line(char **line, size_t *len) {
 	ssize_t nread = getline(line, len, stdin);
