@@ -9,5 +9,5 @@ tests: $(TEST_SOURCE_FILES) $(HEADER_FILES)
 	gcc $(TEST_SOURCE_FILES) -o tests
 
 clean:
-	-rm -f tb
+	-rm -f tb tests
 
