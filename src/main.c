@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "utils.h"
 #include "buildtext.h"
 
 int main(int argc, char *argv[]) {
+	srand(time(NULL));
 	int opt;
 	while ((opt = getopt(argc, argv, "ulRra:p:")) != -1)
 		if (opt == '?')	return 1;

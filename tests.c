@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "src/builders.h"
 
@@ -29,6 +30,7 @@ int expect_str(char *expected, char *actual, char *fail_message) {
 }
 
 int main() {
+	srand(time(NULL));
 	int exit_status = 0;
 
 	/* Builders Tests */
