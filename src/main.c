@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
 	int opt;
-	while ((opt = getopt(argc, argv, "ulr")) != -1)
+	while ((opt = getopt(argc, argv, "ulra:p:")) != -1)
 		if (opt == '?')	return 1;
 
 	char *line = NULL;
