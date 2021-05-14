@@ -15,7 +15,6 @@ char *build_text(char *input, int argc, char *argv[]) {
 			case 'u': uppercase(&text); break;
 			case 'l': lowercase(&text); break;
 			case 'r': reverse(&text); break;
-			default: free(text); return NULL;
 		}
 	}
 
