@@ -34,6 +34,7 @@ int main() {
 	/* Builders Tests */
 	TEST_BUILDER(uppercase, "1AAAA1", "1aAaA1");
 	TEST_BUILDER(lowercase, "1aaaa1", "1aAaA1");
+	TEST_BUILDER(randomcase, "1234;,[", "1234;,[");
 	TEST_BUILDER(reverse, "1AaAa1", "1aAaA1");
 	TEST_BUILDER_WITH_ARGS(append, "hello world", "hello", " world");
 	TEST_BUILDER_WITH_ARGS(prepend, "hello world", "world", "hello ");

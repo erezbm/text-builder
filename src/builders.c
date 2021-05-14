@@ -16,6 +16,15 @@ void lowercase(char **input) {
 		input_val[i] = tolower(input_val[i]);
 }
 
+void randomcase(char **input) {
+	char *input_val = *input;
+	size_t len = strlen(input_val);
+	for (int i = 0; i < len; i++)
+		input_val[i] = rand() % 2 == 0
+		       ? toupper(input_val[i])
+		       : tolower(input_val[i]);
+}
+
 void reverse(char **input) {
 	char *input_val = *input;
 	size_t len = strlen(input_val);
