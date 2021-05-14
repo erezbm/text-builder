@@ -24,6 +24,9 @@ int main() {
 	TEST_BUILDER(lowercase, "1aAaA1", "1aaaa1");
 	TEST_BUILDER(reverse, "1aAaA1", "1AaAa1");
 
+	if (exit_status == 0)
+		puts("All tests succeeded");
+
 	return exit_status;
 }
 
