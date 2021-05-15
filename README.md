@@ -5,6 +5,20 @@ A utility program to apply transformations on text.
 Clone the project and run `make` to get `./tb`.
 
 ## Usage
+Run `tb -h` to see usage and options.
+Possibly outdated usage and options:
+```
+Usage: ./tb [-ulrR] [-a postfix] [-p prefix] [-m count]
+  -u uppercase the input
+  -l lowercase the input
+  -r reverse the input
+  -R randomcase the input
+  -a append <postfix> at the end of the input
+  -p prepend <prefix> at the start of the input
+  -m repeat the input <count> times (negative <count> means 0)
+```
+
+## Usage Examples
 ```bash
 $ echo hello | tb -u
 HELLO
