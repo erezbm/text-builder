@@ -9,6 +9,7 @@ Run `./tb -h` to see usage and options.
 Possibly outdated usage and options:
 ```
 Usage: ./tb [-ulrR] [-a postfix] [-p prefix] [-m count]
+Options:
   -u uppercase the input
   -l lowercase the input
   -r reverse the input
