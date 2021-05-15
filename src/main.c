@@ -11,6 +11,7 @@ void print_usage(char *name) {
 }
 
 void print_options() {
+	puts("Options:");
 	puts("  -u uppercase the input");
 	puts("  -l lowercase the input");
 	puts("  -r reverse the input");
