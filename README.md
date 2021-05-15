@@ -5,7 +5,7 @@ A utility program to apply transformations on text.
 Clone the project and run `make` to get `./tb`.
 
 ## Usage
-Run `tb -h` to see usage and options.
+Run `./tb -h` to see usage and options.
 Possibly outdated usage and options:
 ```
 Usage: ./tb [-ulrR] [-a postfix] [-p prefix] [-m count]
@@ -20,11 +20,11 @@ Usage: ./tb [-ulrR] [-a postfix] [-p prefix] [-m count]
 
 ## Usage Examples
 ```bash
-$ echo hello | tb -u
+$ echo hello | ./tb -u
 HELLO
-$ echo hello | tb -u -r
+$ echo hello | ./tb -u -r
 OLLEH
-$ echo hello | tb -u -r -a ' world'
+$ echo hello | ./tb -u -r -a ' world'
 OLLEH world
 ```
 #### Note
