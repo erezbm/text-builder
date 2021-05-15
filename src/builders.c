@@ -36,8 +36,8 @@ void reverse(char **input) {
 }
 
 void append(char **input, char *postfix) {
-	size_t size = sizeof(char[strlen(*input) + strlen(postfix) + 1]);
-	*input = realloc(*input, size);
+	size_t new_size = sizeof(char[strlen(*input) + strlen(postfix) + 1]);
+	*input = realloc(*input, new_size);
 	strcat(*input, postfix);
 }
 
@@ -48,5 +48,16 @@ void prepend(char **input, char *prefix) {
 
 	memmove(*input + prefix_len, *input, input_size);
 	memcpy(*input, prefix, sizeof(char[prefix_len]));
+}
+
+void repeat(char **input, int times) {
+	if (times < 0) times = 0;
+	size_t input_len = strlen(*input);
+	size_t input_size = sizeof(char[input_len]);
+	*input = realloc(*input, input_size * times + sizeof(char));
+
+	for (int i = 1; i < times; i++)
+		memcpy(*input + (i * input_len), *input, input_size);
+	(*input)[times * input_len] = '\0';
 }
 

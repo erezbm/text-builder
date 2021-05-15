@@ -9,7 +9,7 @@
 int main(int argc, char *argv[]) {
 	srand(time(NULL));
 	int opt;
-	while ((opt = getopt(argc, argv, "ulRra:p:")) != -1)
+	while ((opt = getopt(argc, argv, "ulRra:p:m:")) != -1)
 		if (opt == '?')	return 1;
 
 	char *line = NULL;

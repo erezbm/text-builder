@@ -40,6 +40,9 @@ int main() {
 	TEST_BUILDER(reverse, "1AaAa1", "1aAaA1");
 	TEST_BUILDER_WITH_ARGS(append, "hello world", "hello", " world");
 	TEST_BUILDER_WITH_ARGS(prepend, "hello world", "world", "hello ");
+	TEST_BUILDER_WITH_ARGS(repeat, "abcabcabc", "abc", 3);
+	TEST_BUILDER_WITH_ARGS(repeat, "abc", "abc", 1);
+	TEST_BUILDER_WITH_ARGS(repeat, "", "abc", 0);
 
 	if (exit_status == 0)
 		puts("All tests succeeded");

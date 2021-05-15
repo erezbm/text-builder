@@ -10,7 +10,7 @@ char *build_text(char *input, int argc, char *argv[]) {
 
 	int opt;
 	optind = 1;
-	while ((opt = getopt(argc, argv, "ulRra:p:")) != -1) {
+	while ((opt = getopt(argc, argv, "ulRra:p:m:")) != -1) {
 		switch (opt) {
 			case 'u': uppercase (&text); break;
 			case 'l': lowercase (&text); break;
@@ -18,6 +18,7 @@ char *build_text(char *input, int argc, char *argv[]) {
 			case 'r': reverse   (&text); break;
 			case 'a': append    (&text, optarg); break;
 			case 'p': prepend   (&text, optarg); break;
+			case 'm': repeat    (&text, atoi(optarg)); break;
 		}
 	}
 
