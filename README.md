@@ -1,22 +1,25 @@
 # text-builder
 A utility program to apply transformations on text.  
 
-## Build
-Clone the project and run `make` to get `./tb`.
+## How to Build the C Version
+Clone the project and run `cd c/ && make` to get the `tb` binary.
 
 ## Usage
-Run `./tb -h` to see usage and options.
-Possibly outdated usage and options:
+To run the C version you can use the [built](#build) binary.  
+To run the Haskell version you can use `stack Main.hs`.  
+Use the `-h` flag to see the usage and options.  
+Example output (possibly outdated):
 ```
-Usage: ./tb [-ulrR] [-a postfix] [-p prefix] [-m count]
-Options:
-  -u uppercase the input
-  -l lowercase the input
-  -r reverse the input
-  -R randomcase the input
-  -a append <postfix> at the end of the input
-  -p prepend <prefix> at the start of the input
-  -m repeat the input <count> times (negative <count> means 0)
+Usage: ./tb [-u | -l | -r | -R | -a POSTFIX | -p PREFIX | -m COUNT]...
+Available options:
+  -u Uppercase the input
+  -l Lowercase the input
+  -r Reverse the input
+  -R Randomcase the input
+  -a Append POSTFIX at the end of the input
+  -p Prepend PREFIX at the start of the input
+  -m Repeat the input COUNT times (negative COUNT means 0)
+  -h Show this help text
 ```
 
 ## Usage Examples

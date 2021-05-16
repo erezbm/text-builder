@@ -7,18 +7,19 @@
 #include "buildtext.h"
 
 void print_usage(char *name) {
-	printf("Usage: %s [-ulrR] [-a postfix] [-p prefix] [-m count]\n", name);
+	printf("Usage: %s [-u | -l | -r | -R | -a POSTFIX | -p PREFIX | -m COUNT]...\n", name);
 }
 
 void print_options() {
-	puts("Options:");
-	puts("  -u uppercase the input");
-	puts("  -l lowercase the input");
-	puts("  -r reverse the input");
-	puts("  -R randomcase the input");
-	puts("  -a append <postfix> at the end of the input");
-	puts("  -p prepend <prefix> at the start of the input");
-	puts("  -m repeat the input <count> times (negative <count> means 0)");
+	puts("Available options:");
+	puts("  -u Uppercase the input");
+	puts("  -l Lowercase the input");
+	puts("  -r Reverse the input");
+	puts("  -R Randomcase the input");
+	puts("  -a Append POSTFIX at the end of the input");
+	puts("  -p Prepend PREFIX at the start of the input");
+	puts("  -m Repeat the input COUNT times (negative COUNT means 0)");
+	puts("  -h Show this help text");
 }
 
 int main(int argc, char *argv[]) {
