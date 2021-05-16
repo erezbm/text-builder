@@ -5,7 +5,7 @@ A utility program to apply transformations on text.
 Clone the project and run `cd c/ && make` to get the `tb` binary.
 
 ## Usage
-To run the C version you can use the [built](#build) binary.  
+To run the C version you can use the [built](#how-to-build-the-c-version) binary.  
 To run the Haskell version you can use `stack Main.hs`.  
 Use the `-h` flag to see the usage and options.  
 Example output (possibly outdated):
